@@ -30,6 +30,19 @@ function App() {
     }
   }
 
+  const handleRemove = (cartItem) =>  {
+    const isLastOne = cartItem.quantity === 1;
+    if(isLastOne) setCart(cart.filter((item) => item.id !== cartItem.id));
+    else {
+      const updatedCart = cart.map(item => {
+        if(item.id === cartItem.id) item.amount -= 1;
+        return item;
+      })
+      setCart(updatedCart);
+    }
+    console.log(cart)
+  }
+
   return (
     <>
     <BrowserRouter>
