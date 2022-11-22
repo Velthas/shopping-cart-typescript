@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import './styles/shared.css'
 
 import Header from './components/Header';
 import Main from './components/Main';
@@ -31,7 +32,7 @@ function App() {
   }
 
   const handleRemove = (cartItem) =>  {
-    const isLastOne = cartItem.quantity === 1;
+    const isLastOne = cartItem.amount === 1;
     if(isLastOne) setCart(cart.filter((item) => item.id !== cartItem.id));
     else {
       const updatedCart = cart.map(item => {
@@ -40,15 +41,21 @@ function App() {
       })
       setCart(updatedCart);
     }
-    console.log(cart)
   }
 
   return (
     <>
-    <BrowserRouter>
-      <Header/>
-      <Main stock={ products } handleAdd={ handleAdd }/>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Header 
+          cart={ cart } 
+          handleAdd={ handleAdd } 
+          handleRemove={ handleRemove}
+        />
+        <Main 
+          stock={ products } 
+          handleAdd={ handleAdd }
+        />
+      </BrowserRouter>
     </>
   );
 }
