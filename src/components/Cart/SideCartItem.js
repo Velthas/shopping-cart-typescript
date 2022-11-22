@@ -33,7 +33,7 @@ const SideCartItem = (props) => {
           />
         </QuantityContainer>
         <p>
-          { (product.amount * product.price) + "€" }
+          { (product.amount * product.price) + '€' }
         </p>
       </ProductInfoWrapper>
     </EntryWrapper>

@@ -20,13 +20,19 @@ const Header = (props) => {
       </h1>
       <NavContainer>
         <NavLink>
-          <Link to="/">  { 'Home' } </Link>
+          <Link to="/">  
+            { 'Home' }
+          </Link>
         </NavLink>
         <NavLink>
-          <Link to="/shop">  { 'Shop' } </Link>
+          <Link to="/shop">  
+            { 'Shop' } 
+          </Link>
         </NavLink>
         <NavLink>
-          <Link to="/contacts"> { 'Contacts' } </Link>
+          <Link to="/contacts">
+            { 'Contacts' }
+          </Link>
         </NavLink>
         <CartLink>
           <CartIcon
