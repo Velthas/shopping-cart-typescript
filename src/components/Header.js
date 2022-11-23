@@ -15,24 +15,24 @@ const Header = (props) => {
 
   return (
     <Navbar>
-      <h1>
+      <Logo>
         { 'WeShop' }
-      </h1>
+      </Logo>
       <NavContainer>
         <NavLink>
-          <Link to="/">  
+          <StyledLink to="/">  
             { 'Home' }
-          </Link>
+          </StyledLink>
         </NavLink>
         <NavLink>
-          <Link to="/shop">  
+          <StyledLink to="/shop">  
             { 'Shop' } 
-          </Link>
+          </StyledLink>
         </NavLink>
         <NavLink>
-          <Link to="/contacts">
+          <StyledLink to="/contacts">
             { 'Contacts' }
-          </Link>
+          </StyledLink>
         </NavLink>
         <CartLink>
           <CartIcon
@@ -40,28 +40,42 @@ const Header = (props) => {
            alt="Cart Icon"
            onClick={toggleCartDisplay}
           />
-          { 
-            cartDisplay &&
+        </CartLink>
+        { cartDisplay &&
             <SideCart
               cart={ cart }
               handleAdd={ handleAdd }
               handleRemove={ handleRemove }
             /> 
           }
-        </CartLink>
       </NavContainer>
     </Navbar>
   )
 }
+
+const Logo = styled.h1`
+  font-weight: normal;
+  font-family: 'edition', sans-serif;
+  font-size: 3.5rem; 
+  letter-spacing: 5px;
+`
 
 const Navbar = styled.nav`
   display: flex;
   justify-content: space-around;
   align-items: center;
 
+  position: relative;
   height: 10vh;
-  padding: 20px;
 `
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  color: black;
+`
+
 const NavContainer = styled.ul`
   display: flex;
   flex-direction: row;
@@ -79,10 +93,22 @@ const CartIcon = styled.img`
 
 const NavLink = styled.li`
   padding: 10px 20px;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.1);
+  }
 `
 
 const CartLink = styled(NavLink)`
-  position: relative;
+  background-color: #dfdfdf;
+  border-radius: 80px;
+
+  &:hover{
+    transform: none;
+    filter: brightness(85%);
+  }
 `
 
 export default Header;

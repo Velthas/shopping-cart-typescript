@@ -1,11 +1,21 @@
+@font-face {
+  font-family: 'edition';
+  src: url(../assets/fonts/edition.TTF);
+}
+
+@font-face {
+  font-family: 'bebas-neue';
+  src: url(../assets/fonts/BebasNeue-Regular.ttf)
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1,
 h4,
 p {
   margin: 0;
-
 }

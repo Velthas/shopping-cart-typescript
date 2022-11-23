@@ -30,13 +30,21 @@ const SideCart = (props) => {
           {total + " €"}
         </p>
       </PriceWrapper>
+      <div>
+        <button>
+          {'Proceed to checkout'}
+        </button>
+        <button>
+          {'Close Cart'}
+        </button>
+      </div>
     </CartWrapper>
   )
 }
 
 const CartWrapper = styled.div`
   position: absolute;
-  top: 40px
+  top: 10vh;
   right: 0;
 
   display: flex;
@@ -46,6 +54,9 @@ const CartWrapper = styled.div`
 
   width: 370px;
   padding: 15px;
+
+  background-color: white;
+  border: 1px solid #dfdfdf;
 `
 
 const CartHeader = styled.h2`
@@ -63,18 +74,33 @@ const ItemWrapper = styled.div`
 
   height: 300px;
   width: 100%;
+
   overflow-y: auto;
 `
 
 const PriceWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   width:100%;
 
   margin: 20px 0;
+`
+
+const Button = styled.div`
+  padding: 10px 20px;
+  font-size: 1.1rem;
+
+  border-radius: 4px;
+`
+
+const CheckoutButton = styled(Button)`
+
+`
+
+const CloseButton = styled(Button)`
+
 `
 
 export default SideCart;
