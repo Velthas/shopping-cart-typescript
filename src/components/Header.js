@@ -40,12 +40,14 @@ const Header = (props) => {
            alt="Cart Icon"
            onClick={toggleCartDisplay}
           />
-          { cartDisplay &&
+          { 
+            cartDisplay &&
             <SideCart
               cart={ cart }
               handleAdd={ handleAdd }
               handleRemove={ handleRemove }
-            /> }
+            /> 
+          }
         </CartLink>
       </NavContainer>
     </Navbar>
