@@ -55,20 +55,20 @@ const CartWrapper = styled.div`
   width: 370px;
   padding: 15px;
 
-  background-color: white;
-  border: 1px solid #dfdfdf;
+  background-color: ${({ theme }) => theme.colors.light };
+  border: 1px solid ${({ theme }) => theme.colors.gray.light };
 `
 
 const CartHeader = styled.h2`
   font-family: 'bebas-neue';
   font-size: 1.5rem;
   font-weight: normal;
-  color: black;
+  color: ${({ theme }) => theme.colors.dark };
 
   width: 100%;
   margin: 0;
   align-self: flex-start;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray.light };
 `
 
 const ItemWrapper = styled.div`
@@ -115,9 +115,9 @@ const Button = styled.button`
 `
 
 const CheckoutButton = styled(Button)`
-  color: white;
-  background-color: black;
-  border: 3px solid black;
+  color: ${({ theme }) => theme.colors.light };
+  background-color: ${({ theme }) => theme.colors.dark };
+  border: 3px solid ${({ theme }) => theme.colors.dark };
 
   &:hover{
     transform: scale(1.05);
@@ -125,9 +125,9 @@ const CheckoutButton = styled(Button)`
 `
 
 const CloseButton = styled(Button)`
-  color: black;
+  color: ${({ theme }) => theme.colors.dark };
   background-color: transparent;
-  border: 3px solid black;
+  border: 3px solid ${({ theme }) => theme.colors.dark };
 
   &:hover{
     transform: scale(1.05);

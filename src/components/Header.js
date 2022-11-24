@@ -58,6 +58,7 @@ const Logo = styled.h1`
   font-family: 'edition', sans-serif;
   font-size: 3.5rem; 
   letter-spacing: 5px;
+  color: ${({ theme }) => theme.colors.dark };
 `
 
 const Navbar = styled.nav`
@@ -72,7 +73,7 @@ const Navbar = styled.nav`
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 1.3rem;
-  color: black;
+  color: ${({ theme }) => theme.colors.dark };
 `
 
 const NavContainer = styled.ul`
@@ -101,7 +102,7 @@ const NavLink = styled.li`
 `
 
 const CartLink = styled(NavLink)`
-  background-color: #dfdfdf;
+  background-color: ${({ theme }) => theme.colors.gray.light };
   border-radius: 80px;
   padding: 8px;
 

@@ -51,8 +51,8 @@ const Header = styled.h1`
   font-size: 3rem;
   font-family: 'bebas-neue', sans-serif;
   font-weight: normal;
-  color: white;
-  text-shadow: 1px 1px black;
+  color: ${({ theme }) => theme.colors.light };
+  text-shadow: 1px 1px 1px ${({ theme }) => theme.colors.dark };
 `
 
 const Button = styled.button`
@@ -61,20 +61,20 @@ const Button = styled.button`
   width: 170px;
 
   background-color: transparent;
-  border: 4px solid white;
+  border: 4px solid ${({ theme }) => theme.colors.light };
   border-radius: 3px;
 
   font-size: 1.3rem;
   font-family: 'bebas-neue', sans-serif;
   text-transform: uppercase;
-  color: white;
+  color: ${({ theme }) => theme.colors.light };
 
   transition: 0.3s ease-out;
   cursor: pointer;
   
   &:hover {
-    color: black;
-    background-color: white;
+    color: ${({ theme }) => theme.colors.dark };
+    background-color: ${({ theme }) => theme.colors.light };
   }
 `
 

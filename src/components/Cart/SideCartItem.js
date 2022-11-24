@@ -44,7 +44,7 @@ const EntryWrapper = styled.div`
   display: flex;
 
   padding: 20px 5px;
-  border-bottom: 1px solid #dfdfdf;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.gray.light };
 `
 
 const ProductImg = styled.img`
@@ -74,15 +74,15 @@ const QuantityContainer = styled.div `
 `
 
 const QuantityIcon = styled.img`
-  background-color: #dfdfdf;
+  background-color: ${({ theme }) => theme.colors.gray.light };
   height: 18px;
   width: 18px;
 
   transition: 0.3s ease-out;
   cursor: pointer;
 
-  &hover:{
-    background-color: gray;
+  &:hover{
+    background-color: ${({ theme }) => theme.colors.gray.dark };
   }
 `
 
