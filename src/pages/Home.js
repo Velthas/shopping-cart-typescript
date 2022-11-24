@@ -44,7 +44,7 @@ const HeroText = styled.div`
 
   gap: 8px;
   margin-left: 10vw;
-  margin-top: 10vh;
+  margin-top: 20vh;
 `
 
 const Header = styled.h1`

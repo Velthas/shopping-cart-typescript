@@ -20,13 +20,13 @@ const Shop = (props) => {
 
 const ShopWrapper = styled.div`
   width: 100vw;
+  padding: 5vw;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 5vh;
 
-  background-image: url(${background});
-  background-repeat: repeat;
+  background-color: ${ ({ theme }) => theme.colors.gray.medium };
 `
 
 export default Shop;

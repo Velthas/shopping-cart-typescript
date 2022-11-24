@@ -55,8 +55,10 @@ const Header = (props) => {
 
 const Logo = styled.h1`
   font-weight: normal;
-  font-family: 'edition', sans-serif;
-  font-size: 3.5rem; 
+  font-family: 'vogue', sans-serif;
+  font-size: 3rem; 
+
+  margin-top: 10px;
   letter-spacing: 5px;
   color: ${({ theme }) => theme.colors.dark };
 `
@@ -68,6 +70,8 @@ const Navbar = styled.nav`
 
   position: relative;
   height: 10vh;
+
+  box-shadow: 0px 3px 7px 0px #e1dddd;
 `
 
 const StyledLink = styled(Link)`
