@@ -26,6 +26,7 @@ const Home = () => {
 const HomeWrapper = styled.div`
   background-image: url(${forMajeure});
   background-size: cover;
+  background-position: center;
 
   height: 90vh;
   width: 100vw;
@@ -33,22 +34,25 @@ const HomeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 `
 
 const HeroText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 8px;
+  margin-left: 10vw;
+  margin-top: 10vh;
 `
 
 const Header = styled.h1`
   font-size: 3rem;
   font-family: 'bebas-neue', sans-serif;
   font-weight: normal;
-  color: black;
-  text-shadow: 1px 1px white;
+  color: white;
+  text-shadow: 1px 1px black;
 `
 
 const Button = styled.button`
@@ -57,19 +61,20 @@ const Button = styled.button`
   width: 170px;
 
   background-color: transparent;
-  border: 4px solid black;
+  border: 4px solid white;
   border-radius: 3px;
 
   font-size: 1.3rem;
   font-family: 'bebas-neue', sans-serif;
   text-transform: uppercase;
+  color: white;
 
   transition: 0.3s ease-out;
   cursor: pointer;
   
   &:hover {
-    color: white;
-    background-color: black;
+    color: black;
+    background-color: white;
   }
 `
 

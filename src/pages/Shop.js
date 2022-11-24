@@ -4,7 +4,7 @@ const Shop = (props) => {
   const { stock, handleAdd } = props;
   return (
     <>
-      <h1>I am Shop</h1>
+      <div>
       {stock.map(product => 
         <ShopItem
           key={product.id}
@@ -12,6 +12,7 @@ const Shop = (props) => {
           handleAdd={handleAdd} 
         />
       )}
+      </div>
     </>
   )
 }

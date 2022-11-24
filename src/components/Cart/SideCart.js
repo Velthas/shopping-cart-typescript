@@ -30,14 +30,14 @@ const SideCart = (props) => {
           {total + " €"}
         </p>
       </PriceWrapper>
-      <div>
-        <button>
+      <ButtonWrapper>
+        <CheckoutButton>
           {'Proceed to checkout'}
-        </button>
-        <button>
+        </CheckoutButton>
+        <CloseButton>
           {'Close Cart'}
-        </button>
-      </div>
+        </CloseButton>
+      </ButtonWrapper>
     </CartWrapper>
   )
 }
@@ -60,12 +60,15 @@ const CartWrapper = styled.div`
 `
 
 const CartHeader = styled.h2`
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-family: 'bebas-neue';
+  font-size: 1.5rem;
+  font-weight: normal;
   color: black;
 
-  margin: 20px 0;
-  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
+  align-self: flex-start;
+  border-bottom: 1px solid #dfdfdf;
 `
 
 const ItemWrapper = styled.div`
@@ -84,23 +87,51 @@ const PriceWrapper = styled.div`
   align-items: center;
 
   width:100%;
-
   margin: 20px 0;
+
+  font-size: 1.1rem;
 `
 
-const Button = styled.div`
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 10px;
+
+  width: 100%;
+  gap: 10px;
+`
+
+const Button = styled.button`
   padding: 10px 20px;
-  font-size: 1.1rem;
+  width: 80%;
+  text-align: center;
+
+  font-size: 1.3rem;
+  font-family: 'bebas-neue', sans-serif;
 
   border-radius: 4px;
+  transition: 0.3 ease-out;
 `
 
 const CheckoutButton = styled(Button)`
+  color: white;
+  background-color: black;
+  border: 3px solid black;
 
+  &:hover{
+    transform: scale(1.05);
+  }
 `
 
 const CloseButton = styled(Button)`
+  color: black;
+  background-color: transparent;
+  border: 3px solid black;
 
+  &:hover{
+    transform: scale(1.05);
+  }
 `
 
 export default SideCart;

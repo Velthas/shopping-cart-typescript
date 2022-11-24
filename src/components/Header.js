@@ -71,7 +71,6 @@ const Navbar = styled.nav`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  font-family: sans-serif;
   font-size: 1.3rem;
   color: black;
 `
@@ -104,6 +103,7 @@ const NavLink = styled.li`
 const CartLink = styled(NavLink)`
   background-color: #dfdfdf;
   border-radius: 80px;
+  padding: 8px;
 
   &:hover{
     transform: none;
