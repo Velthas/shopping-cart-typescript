@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='shopping-cart'>
         <Header 
           cart={ cart } 
           handleAdd={ handleAdd } 
