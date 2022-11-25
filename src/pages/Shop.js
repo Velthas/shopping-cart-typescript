@@ -1,8 +1,6 @@
 import ShopItem from "../components/ShopItem";
 import styled from 'styled-components';
 
-import background from '../assets/images/background-test.jpg'
-
 const Shop = (props) => {
   const { stock, handleAdd } = props;
   return (

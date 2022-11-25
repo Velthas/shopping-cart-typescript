@@ -1,7 +1,79 @@
+import styled from 'styled-components';
+
+import facebook from '../assets/images/facebook.png';
+import messenger from '../assets/images/messenger.png';
+import instagram from '../assets/images/instagram.png';
+import pinterest from '../assets/images/pinterest.png';
+import github from '../assets/images/github.png';
+
 const Contacts = () => {
   return (
-    <h1>I am Contacts</h1>
+    <ContactsWrapper>
+      <ImgWrapper>
+        <a href='https://facebook.com'>
+          <SocialImg src={facebook} alt='Facebook Icon' />
+        </a>
+        <a href='https://messenger.com'>
+          <SocialImg src={messenger} alt='Messenger Icon' />
+        </a>
+        <a href='https://instagram.com'>
+          <SocialImg src={instagram} alt='Instagram Icon' />
+        </a>
+        <a href='https://pinterest.com'>
+          <SocialImg src={pinterest} alt='Pinterest Icon' />
+        </a>
+        <a href='https://github.com'>
+          <SocialImg src={github} alt='Github Icon' />
+        </a>
+      </ImgWrapper>
+      <AdressContainer>
+        <AdressPara>
+          {'WeShop'}
+        </AdressPara>
+        <AdressPara>
+          {'City Centre, Night City TX'}
+        </AdressPara>
+      </AdressContainer>
+    </ContactsWrapper>
   )
 }
+
+const ContactsWrapper = styled.div`
+  width: 100vw;
+  height: 90vh;
+  background-color: ${ ({ theme }) => theme.colors.gray.medium };
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh
+`
+
+const ImgWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60vw;
+`
+
+const SocialImg = styled.img`
+  height: 70px;
+  width: 70px;
+  transition: ease-out 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`
+
+const AdressContainer = styled.div`
+  text-align: center;
+`
+
+const AdressPara = styled.div`
+  color: ${ ({ theme }) => theme.colors.dark };
+  font-size: 1.3rem;
+`
 
 export default Contacts;
