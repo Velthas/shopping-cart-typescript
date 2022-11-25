@@ -39,6 +39,12 @@ const HomeWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  @media(max-width: 700px){
+    height: 100vh;
+    background-position: 10%;
+    align-items: center;
+  }
 `
 
 const HeroText = styled.div`
@@ -49,6 +55,10 @@ const HeroText = styled.div`
   gap: 8px;
   margin-left: 10vw;
   margin-top: 20vh;
+
+  @media(max-width: 700px) {
+    margin: 0;
+  }
 `
 
 const Header = styled.h1`

@@ -10,8 +10,9 @@ const Header = (props) => {
   const {cart, handleAdd, handleRemove} = props;
 
   const [cartDisplay, setCartDisplay] = useState(false);
-
   const toggleCartDisplay = () => setCartDisplay(!cartDisplay);
+
+  const productAmount = cart.reduce((accumulator, item) => accumulator + item.amount, 0);
 
   return (
     <Navbar>
@@ -40,6 +41,11 @@ const Header = (props) => {
            alt="Cart Icon"
            onClick={toggleCartDisplay}
           />
+          { productAmount > 0 && 
+            <AmountBubble>
+              {productAmount}
+            </AmountBubble>
+          }
         </CartLink>
         { cartDisplay &&
             <SideCart
@@ -101,6 +107,24 @@ const CartIcon = styled.img`
   height: 30px;
 `
 
+const AmountBubble = styled.div`
+  position: absolute;
+  z-index: 300;
+  bottom: 0;
+  right: 0;
+
+  text-align: center;
+  border-radius: 20px;
+
+  height: 20px;
+  width: 20px;
+
+  background-color: ${({theme}) => theme.colors.dark};
+  color: ${({theme}) => theme.colors.light};
+
+  font-size: 0.8rem;
+`
+
 const NavLink = styled.li`
   padding: 10px 20px;
   transition: 0.3s ease-out;
@@ -112,6 +136,7 @@ const NavLink = styled.li`
 `
 
 const CartLink = styled(NavLink)`
+  position: relative;
   background-color: ${({ theme }) => theme.colors.gray.light };
   border-radius: 80px;
   padding: 8px;

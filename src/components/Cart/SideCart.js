@@ -60,6 +60,14 @@ const CartWrapper = styled.div`
 
   background-color: ${({ theme }) => theme.colors.light };
   border: 1px solid ${({ theme }) => theme.colors.gray.light };
+
+  @media(max-width:700px) {
+    top: 20vh;
+  }
+
+  @media(max-width: 500px) {
+    width: 100vw;
+  }
 `
 
 const CartHeader = styled.h2`

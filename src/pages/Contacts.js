@@ -67,6 +67,16 @@ const SocialImg = styled.img`
   &:hover {
     transform: scale(1.1);
   }
+
+  @media(max-width: 700px) {
+    width: 45px;
+    height: 45px;
+  }
+
+  @media(max-width: 700px) {
+    width: 35px;
+    height: 35px;
+  }
 `
 
 const AdressContainer = styled.div`
@@ -76,6 +86,10 @@ const AdressContainer = styled.div`
 const AdressPara = styled.div`
   color: ${ ({ theme }) => theme.colors.dark };
   font-size: 1.3rem;
+
+  @media(max-width: 700px) {
+    font-size: 1.2rem;
+  }
 `
 
 export default Contacts;
