@@ -6,7 +6,8 @@ const Theme = {
       light: '#dfdfdf',
       medium: '#f7f7f7',
       dark: 'gray',
-    }
+    },
+    green: '#0ac25c',
   }
 }
 

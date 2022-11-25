@@ -5,19 +5,33 @@ const ShopItem = (props) => {
   const {product, handleAdd} = props
 
   const [button, setButton] = useState(false);
+  const [added, setAdded] = useState(false);
 
   const toggleButton = (bool) => setButton(bool); 
+  const showCartFeedback = () => {
+    setAdded(true);
+    setTimeout(() => setAdded(false), 3000);
+  }
+  const addToCart = () => {
+    handleAdd(product);
+    showCartFeedback();
+  }
 
   return (
     <ProductContainer 
       onMouseEnter={() => toggleButton(true)}
       onMouseLeave={()=> toggleButton(false)}
     >
-      <ImageBackdrop image={product.image}>
+      <ImageBackdrop added={added} image={product.image}>
+        { added && 
+          <ConfirmButton>
+            {'Item was added to your cart!'}
+          </ConfirmButton>
+        }
         { button &&
           <CartButton 
             type="button"
-            onClick={() => handleAdd(product)}
+            onClick={ addToCart }
           >
             { "BUY NOW" }
           </CartButton>
@@ -52,8 +66,20 @@ const ImageBackdrop = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: ${(props) => props.added ? 'space-between' : 'flex-end'};
   align-items: center;
+`
+
+const ConfirmButton = styled.button`
+  padding: 10px 15px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 3px;
+  opacity: 0.8;
+
+  color: ${ ({theme}) => theme.colors.light };
+  background-color: ${ ({theme}) => theme.colors.green };
 `
 
 const CartButton = styled.button `

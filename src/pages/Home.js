@@ -7,16 +7,16 @@ const Home = () => {
     <HomeWrapper>
       <HeroText>
         <Header>
-          Be comfortable,
+          { "Be comfortable," }
         </Header>
         <Header>
-          Be inspired,
+          { "Be inspired," }
         </Header>
         <Header>
-          Be right at home.
+          { "Be right at home." }
         </Header>
         <Button>
-          Shop Now
+         { "Shop Now" }
         </Button>
       </HeroText>
     </HomeWrapper>
