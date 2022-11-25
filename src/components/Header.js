@@ -46,6 +46,7 @@ const Header = (props) => {
               cart={ cart }
               handleAdd={ handleAdd }
               handleRemove={ handleRemove }
+              toggleCartDisplay={ toggleCartDisplay }
             /> 
           }
       </NavContainer>

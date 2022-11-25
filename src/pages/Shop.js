@@ -17,6 +17,8 @@ const Shop = (props) => {
 }
 
 const ShopWrapper = styled.div`
+  animation: appear-slowly 0.5s ease-in 1;
+
   width: 100vw;
   padding: 5vw;
 

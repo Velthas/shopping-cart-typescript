@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import forMajeure from '../assets/images/formajeure4.jpg'
 
@@ -15,15 +16,19 @@ const Home = () => {
         <Header>
           { "Be right at home." }
         </Header>
-        <Button>
-         { "Shop Now" }
-        </Button>
+        <Link to="/shop">
+          <Button>
+          { "Shop Now" }
+          </Button>
+        </Link>
       </HeroText>
     </HomeWrapper>
   )
 }
 
 const HomeWrapper = styled.div`
+  animation: appear-slowly 0.5s ease-in-out 1;
+
   background-image: url(${forMajeure});
   background-size: cover;
   background-position: center;

@@ -2,11 +2,13 @@ import SideCartItem from "./SideCartItem";
 import styled from 'styled-components';
 
 const SideCart = (props) => {
-  const {cart, handleAdd, handleRemove} = props;
+  const {cart, handleAdd, handleRemove, toggleCartDisplay} = props;
 
   const total = cart.reduce((accumulator, item) =>
     accumulator + (item.amount * item.price), 0)
       .toFixed(2);
+
+  const notifyUser = () => alert('Hello! This project does not include a checkout option, so this would be the end of the demo! Thank you for using it!')
 
   return (
     <CartWrapper>
@@ -16,10 +18,10 @@ const SideCart = (props) => {
       <ItemWrapper>
         { cart.map(item => 
         <SideCartItem
-          key={item.id}
-          product={item}
+          key={ item.id }
+          product={ item }
           handleAdd={ handleAdd }
-          handleRemove={ handleRemove}
+          handleRemove={ handleRemove }
         />) }
       </ItemWrapper>
       <PriceWrapper>
@@ -31,10 +33,10 @@ const SideCart = (props) => {
         </p>
       </PriceWrapper>
       <ButtonWrapper>
-        <CheckoutButton>
+        <CheckoutButton onClick={ notifyUser }>
           {'Proceed to checkout'}
         </CheckoutButton>
-        <CloseButton>
+        <CloseButton onClick={ toggleCartDisplay } >
           {'Close Cart'}
         </CloseButton>
       </ButtonWrapper>
@@ -44,6 +46,7 @@ const SideCart = (props) => {
 
 const CartWrapper = styled.div`
   position: absolute;
+  z-index: 300;
   top: 10vh;
   right: 0;
 

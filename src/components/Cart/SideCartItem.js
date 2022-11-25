@@ -9,6 +9,7 @@ const SideCartItem = (props) => {
   const shortenedName = product.title.length > 15 
   ? product.title.slice(0, 15) + '...'
   : product.title;
+  const total = (product.amount * product.price).toFixed(2);
 
   return (
     <EntryWrapper>
@@ -33,7 +34,7 @@ const SideCartItem = (props) => {
           />
         </QuantityContainer>
         <p>
-          { (product.amount * product.price) + '€' }
+          { total + '€' }
         </p>
       </ProductInfoWrapper>
     </EntryWrapper>
