@@ -4,14 +4,15 @@ import './styles/shared.css'
 
 import Header from './components/Header';
 import Main from './components/Main';
-
+import Footer from './components/Footer';
 
 function App() {
   const [products, setProducts] = useState([])
   useEffect(() => { 
     const getClothes = async () => {
-      const response = await fetch('https://fakestoreapi.com/products?limit=10');
-      const dataArray = await response.json();
+      const response = await fetch('https://fakestoreapi.com/products');
+      const productArray = await response.json();
+      const dataArray = productArray.filter(item => item.category !== 'electronics');
       setProducts(dataArray);
     }
     getClothes();
@@ -55,6 +56,7 @@ function App() {
           stock={ products } 
           handleAdd={ handleAdd }
         />
+        <Footer/>
       </BrowserRouter>
     </>
   );

@@ -33,8 +33,7 @@ const HomeWrapper = styled.div`
   background-size: cover;
   background-position: center;
 
-  height: 90vh;
-  width: 100vw;
+  height: 120vh;
 
   display: flex;
   flex-direction: column;

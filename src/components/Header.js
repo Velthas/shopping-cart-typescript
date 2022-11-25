@@ -72,7 +72,12 @@ const Navbar = styled.nav`
   position: relative;
   height: 10vh;
 
-  box-shadow: 0px 3px 7px 0px #e1dddd;
+  box-shadow: 0px 3px 7px 0px #858585;
+
+  @media(max-width: 700px) {
+    height: 20vh;
+    flex-direction: column;
+  }
 `
 
 const StyledLink = styled(Link)`
