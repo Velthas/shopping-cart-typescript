@@ -1,4 +1,4 @@
-import ShopItem from "./ShopItem";
+import ShopItem from "../components/ShopItem";
 import styled from 'styled-components';
 
 const Shop = (props) => {

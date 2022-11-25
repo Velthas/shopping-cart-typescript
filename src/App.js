@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './styles/shared.css';
+import './styles/shared.css'
 
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([])
   useEffect(() => { 
     const getClothes = async () => {
       const response = await fetch('https://fakestoreapi.com/products');
@@ -27,7 +27,7 @@ function App() {
       const updatedCart = cart.map(product => {
         if(product.id === item.id) product.amount += 1;
         return product;
-      });
+      })
       setCart(updatedCart);
     }
   }
@@ -46,7 +46,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='shopping-cart'>
+      <BrowserRouter>
         <Header 
           cart={ cart } 
           handleAdd={ handleAdd } 
