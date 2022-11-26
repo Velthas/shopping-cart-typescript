@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import github from '../assets/images/github.png'
+import React from 'react';
+import styled from 'styled-components';
+import github from '../assets/images/github.png';
 
 function Footer() {
   const codeUrl = 'https://github.com/Velthas/shopping-cart';
@@ -7,7 +8,7 @@ function Footer() {
   return (
     <FooterWrapper>
       <p>
-        {"Coded by Velthas (c) 2022"}
+        {'Coded by Velthas (c) 2022'}
       </p>
       <a href={codeUrl}>
         <GithubIcon src={github} alt={'Github Icon'} />
@@ -24,9 +25,9 @@ const FooterWrapper = styled.div`
   align-items: center;
   gap: 5px;
   
-  background-color: ${({theme}) => theme.colors.light};
-  color: ${({theme}) => theme.colors.dark};
-`
+  background-color: ${({ theme }) => theme.colors.light};
+  color: ${({ theme }) => theme.colors.dark};
+`;
 
 const GithubIcon = styled.img`
   height: 18px;
@@ -35,6 +36,6 @@ const GithubIcon = styled.img`
   &:hover {
     transform: scale(1.2);
   }
-`
+`;
 
 export default Footer;

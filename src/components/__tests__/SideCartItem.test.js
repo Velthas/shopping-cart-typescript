@@ -1,9 +1,10 @@
-import SideCartItem from "../Cart/SideCartItem";
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../styles/theme';
+import SideCartItem from '../Cart/SideCartItem';
 
 describe('Product Item Component', () => {
   const item = {
@@ -16,8 +17,8 @@ describe('Product Item Component', () => {
   it('appropriately renders product information', () => {
     const mock = jest.fn();
     render(
-      <ThemeProvider theme={ theme }>
-        <SideCartItem product={ item } handleAdd={ mock } handleRemove={ mock }/>
+      <ThemeProvider theme={theme}>
+        <SideCartItem product={item} handleAdd={mock} handleRemove={mock} />
       </ThemeProvider>
     );
 
@@ -41,8 +42,8 @@ describe('Product Item Component', () => {
     const decrMock = jest.fn();
 
     render(
-      <ThemeProvider theme={ theme }>
-        <SideCartItem product={ item } handleAdd={ addMock } handleRemove={ decrMock }/>
+      <ThemeProvider theme={theme}>
+        <SideCartItem product={item} handleAdd={addMock} handleRemove={decrMock} />
       </ThemeProvider>
     );
 

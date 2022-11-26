@@ -1,24 +1,25 @@
-import Header from '../Header';
+import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import {render, screen} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../styles/theme';
+import Header from '../Header';
 
 describe('Header Component', () => {
   const incr = jest.fn();
   const decr = jest.fn();
-  const wrappedHeader = (cart) =>  (
-  <MemoryRouter> 
-    <ThemeProvider theme={theme}>
-      <Header
-        handleAdd={incr}
-        handleRemove={decr}
-        cart={cart}
-      /> 
-    </ThemeProvider>
-  </MemoryRouter>
-  );
+  const wrappedHeader = (cart) => (
+    <MemoryRouter>
+      <ThemeProvider theme={theme}>
+        <Header
+          handleAdd={incr}
+          handleRemove={decr}
+          cart={cart}
+        />
+      </ThemeProvider>
+    </MemoryRouter>
+  ); 
 
   it('renders the container', () => {
     const cart = [];
@@ -51,9 +52,9 @@ describe('Header Component', () => {
   });
 
   it('amount of items displayed when cart is full', () => {
-    const fullCart = [{amount: 3}, {amount: 5}];
+    const fullCart = [{ amount: 3 }, { amount: 5 }];
     render(wrappedHeader(fullCart));
-    
+
     const cartBubble = screen.getByText(fullCart.reduce((a, i) => a + i.amount, 0));
 
     expect(cartBubble).toBeInTheDocument();

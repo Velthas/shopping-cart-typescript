@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 
 import facebook from '../assets/images/facebook.png';
@@ -10,20 +11,20 @@ const Contacts = () => {
   return (
     <ContactsWrapper>
       <ImgWrapper>
-        <a href='https://facebook.com'>
-          <SocialImg src={facebook} alt='Facebook Icon' />
+        <a href="https://facebook.com">
+          <SocialImg src={facebook} alt="Facebook Icon" />
         </a>
-        <a href='https://messenger.com'>
-          <SocialImg src={messenger} alt='Messenger Icon' />
+        <a href="https://messenger.com">
+          <SocialImg src={messenger} alt="Messenger Icon" />
         </a>
-        <a href='https://instagram.com'>
-          <SocialImg src={instagram} alt='Instagram Icon' />
+        <a href="https://instagram.com">
+          <SocialImg src={instagram} alt="Instagram Icon" />
         </a>
-        <a href='https://pinterest.com'>
-          <SocialImg src={pinterest} alt='Pinterest Icon' />
+        <a href="https://pinterest.com">
+          <SocialImg src={pinterest} alt="Pinterest Icon" />
         </a>
-        <a href='https://github.com'>
-          <SocialImg src={github} alt='Github Icon' />
+        <a href="https://github.com">
+          <SocialImg src={github} alt="Github Icon" />
         </a>
       </ImgWrapper>
       <AdressContainer>
@@ -35,20 +36,20 @@ const Contacts = () => {
         </AdressPara>
       </AdressContainer>
     </ContactsWrapper>
-  )
-}
+  );
+};
 
 const ContactsWrapper = styled.div`
   width: 100vw;
   height: 90vh;
-  background-color: ${ ({ theme }) => theme.colors.gray.medium };
+  background-color: ${({ theme }) => theme.colors.gray.medium};
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10vh
-`
+`;
 
 const ImgWrapper = styled.div`
 animation: appear-slowly 0.5s ease-in 1;
@@ -56,7 +57,7 @@ animation: appear-slowly 0.5s ease-in 1;
   justify-content: space-around;
   align-items: center;
   width: 60vw;
-`
+`;
 
 const SocialImg = styled.img`
   height: 70px;
@@ -76,19 +77,19 @@ const SocialImg = styled.img`
     width: 35px;
     height: 35px;
   }
-`
+`;
 
 const AdressContainer = styled.div`
   text-align: center;
-`
+`;
 
 const AdressPara = styled.div`
-  color: ${ ({ theme }) => theme.colors.dark };
+  color: ${({ theme }) => theme.colors.dark};
   font-size: 1.3rem;
 
   @media(max-width: 700px) {
     font-size: 1.2rem;
   }
-`
+`;
 
 export default Contacts;

@@ -1,20 +1,22 @@
-import ShopItem from "./ShopItem";
+import React from 'react';
 import styled from 'styled-components';
+
+import ShopItem from './ShopItem';
 
 const Shop = (props) => {
   const { stock, handleAdd } = props;
   return (
     <ShopWrapper>
-      {stock.map(product => 
+      {stock.map((product) =>
         <ShopItem
           key={product.id}
           product={product}
-          handleAdd={handleAdd} 
+          handleAdd={handleAdd}
         />
       )}
     </ShopWrapper>
-  )
-}
+  );
+};
 
 const ShopWrapper = styled.div`
   width: 100vw;
@@ -24,7 +26,7 @@ const ShopWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 5vh;
 
-  background-color: ${ ({ theme }) => theme.colors.gray.medium };
-`
+  background-color: ${({ theme }) => theme.colors.gray.medium};
+`;
 
 export default Shop;

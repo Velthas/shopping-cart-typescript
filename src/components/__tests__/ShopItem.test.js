@@ -1,17 +1,18 @@
-import ShopItem from '../../pages/Shop/ShopItem';
+import React from 'react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
-import theme from '../../styles/theme';
 import { ThemeProvider } from 'styled-components';
+import theme from '../../styles/theme';
+import ShopItem from '../../pages/Shop/ShopItem';
 
 describe('Shop Item Component', () => {
   it('renders content of item correctly', () => {
-    const product = { title: 'Test', price: '10'};
+    const product = { title: 'Test', price: '10' };
     const mock = jest.fn();
     render(
       <ThemeProvider theme={theme}>
-        <ShopItem product={ product } handleAdd={ mock } />
+        <ShopItem product={product} handleAdd={mock} />
       </ThemeProvider>
     );
 
@@ -23,11 +24,11 @@ describe('Shop Item Component', () => {
   });
 
   it('displays buy button when hovering', () => {
-    const product = { title: 'Test', price: '10'};
+    const product = { title: 'Test', price: '10' };
     const mock = jest.fn();
     render(
       <ThemeProvider theme={theme}>
-        <ShopItem product={ product } handleAdd={ mock } />
+        <ShopItem product={product} handleAdd={mock} />
       </ThemeProvider>
     );
 
@@ -37,11 +38,11 @@ describe('Shop Item Component', () => {
   });
 
   it('registers add to cart click', () => {
-    const product = { title: 'Test', price: '10'};
+    const product = { title: 'Test', price: '10' };
     const mock = jest.fn();
     render(
       <ThemeProvider theme={theme}>
-        <ShopItem product={ product } handleAdd={ mock } />
+        <ShopItem product={product} handleAdd={mock} />
       </ThemeProvider>
     );
 
@@ -52,11 +53,11 @@ describe('Shop Item Component', () => {
   });
 
   it('when product is added to cart, feedback button is displayed', () => {
-    const product = { title: 'Test', price: '10'};
+    const product = { title: 'Test', price: '10' };
     const mock = jest.fn();
     render(
       <ThemeProvider theme={theme}>
-        <ShopItem product={ product } handleAdd={ mock } />
+        <ShopItem product={product} handleAdd={mock} />
       </ThemeProvider>
     );
 
@@ -66,4 +67,4 @@ describe('Shop Item Component', () => {
     const feedbackButton = screen.getByText(/item was added to your cart/i);
     expect(feedbackButton).toBeInTheDocument();
   });
-})
+});

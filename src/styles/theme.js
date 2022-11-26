@@ -8,7 +8,7 @@ const Theme = {
       dark: 'gray',
     },
     green: '#0ac25c',
-  }
-}
+  },
+};
 
 export default Theme;

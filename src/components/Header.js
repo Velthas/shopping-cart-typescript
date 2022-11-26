@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import SideCart from './Cart/SideCart';
 
-import cartIcon from '../assets/images/shop.svg'
+import cartIcon from '../assets/images/shop.svg';
 
 const Header = (props) => {
-  const {cart, handleAdd, handleRemove} = props;
+  const { cart, handleAdd, handleRemove } = props;
 
   const [cartDisplay, setCartDisplay] = useState(false);
   const toggleCartDisplay = () => setCartDisplay(!cartDisplay);
@@ -21,13 +21,13 @@ const Header = (props) => {
       </Logo>
       <NavContainer>
         <NavLink>
-          <StyledLink to="/">  
+          <StyledLink to="/">
             { 'Home' }
           </StyledLink>
         </NavLink>
         <NavLink>
-          <StyledLink to="/shop">  
-            { 'Shop' } 
+          <StyledLink to="/shop">
+            { 'Shop' }
           </StyledLink>
         </NavLink>
         <NavLink>
@@ -37,28 +37,28 @@ const Header = (props) => {
         </NavLink>
         <CartLink>
           <CartIcon
-           src={ cartIcon }
-           alt="Cart Icon"
-           onClick={toggleCartDisplay}
+            src={cartIcon}
+            alt="Cart Icon"
+            onClick={toggleCartDisplay}
           />
-          { productAmount > 0 && 
+          { productAmount > 0 && (
             <AmountBubble>
               {productAmount}
             </AmountBubble>
-          }
+          )}
         </CartLink>
-        { cartDisplay &&
-            <SideCart
-              cart={ cart }
-              handleAdd={ handleAdd }
-              handleRemove={ handleRemove }
-              toggleCartDisplay={ toggleCartDisplay }
-            /> 
-          }
+        { cartDisplay && (
+        <SideCart
+          cart={cart}
+          handleAdd={handleAdd}
+          handleRemove={handleRemove}
+          toggleCartDisplay={toggleCartDisplay}
+        />
+        )}
       </NavContainer>
     </Navbar>
-  )
-}
+  );
+};
 
 const Logo = styled.h1`
   font-weight: normal;
@@ -67,8 +67,8 @@ const Logo = styled.h1`
 
   margin-top: 10px;
   letter-spacing: 5px;
-  color: ${({ theme }) => theme.colors.dark };
-`
+  color: ${({ theme }) => theme.colors.dark};
+`;
 
 const Navbar = styled.nav`
   display: flex;
@@ -84,13 +84,13 @@ const Navbar = styled.nav`
     height: 20vh;
     flex-direction: column;
   }
-`
+`;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   font-size: 1.3rem;
-  color: ${({ theme }) => theme.colors.dark };
-`
+  color: ${({ theme }) => theme.colors.dark};
+`;
 
 const NavContainer = styled.ul`
   display: flex;
@@ -101,11 +101,11 @@ const NavContainer = styled.ul`
 
   margin: 0;
   padding: 0;
-`
+`;
 
 const CartIcon = styled.img`
   height: 30px;
-`
+`;
 
 const AmountBubble = styled.div`
   position: absolute;
@@ -119,11 +119,11 @@ const AmountBubble = styled.div`
   height: 20px;
   width: 20px;
 
-  background-color: ${({theme}) => theme.colors.dark};
-  color: ${({theme}) => theme.colors.light};
+  background-color: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light};
 
   font-size: 0.8rem;
-`
+`;
 
 const NavLink = styled.li`
   padding: 10px 20px;
@@ -133,11 +133,11 @@ const NavLink = styled.li`
   &:hover{
     transform: scale(1.1);
   }
-`
+`;
 
 const CartLink = styled(NavLink)`
   position: relative;
-  background-color: ${({ theme }) => theme.colors.gray.light };
+  background-color: ${({ theme }) => theme.colors.gray.light};
   border-radius: 80px;
   padding: 8px;
 
@@ -145,6 +145,6 @@ const CartLink = styled(NavLink)`
     transform: none;
     filter: brightness(85%);
   }
-`
+`;
 
 export default Header;
