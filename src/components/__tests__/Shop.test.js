@@ -1,10 +1,12 @@
-import Shop from '../../pages/Shop';
+import Shop from '../../pages/Shop/Shop';
 import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
+import { ThemeProvider } from 'styled-components';
+import theme from '../../styles/theme';
 
 // Unnecessary use of a mock, could have just queried using getByText
 // Just wanted to practice mocking a component and using data-testid
-jest.mock("../ShopItem.js", () => ({product}) => {
+jest.mock("../../pages/Shop/ShopItem.js", () => ({product}) => {
   return <mock-item data-testid={product.id} />;
 });
 
@@ -17,7 +19,10 @@ const stock = [
 describe('Shop Page Component', () => {
   it('renders stock correctly', () => {
     const mock = jest.fn();
-    render (<Shop stock={ stock } handleAdd={ mock }/>);
+    render ( 
+      <ThemeProvider theme={theme}>
+        <Shop stock={ stock } handleAdd={ mock }/>
+      </ThemeProvider>);
 
     const item1 = screen.getByTestId(stock[0].id);
     const item2 = screen.getByTestId(stock[1].id);
