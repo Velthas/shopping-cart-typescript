@@ -50,6 +50,8 @@ const ShopItem = (props) => {
 }
 
 const ProductContainer = styled.div `
+  animation: appear-slowly 0.5s ease-in 1;
+
   background-color: white;
   border-radius: 4px;
   border: 1px solid #dfdfdf;

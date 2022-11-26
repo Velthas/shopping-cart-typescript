@@ -39,8 +39,6 @@ const Contacts = () => {
 }
 
 const ContactsWrapper = styled.div`
-  animation: appear-slowly 0.5s ease-in-out 1;
-
   width: 100vw;
   height: 90vh;
   background-color: ${ ({ theme }) => theme.colors.gray.medium };
@@ -53,6 +51,7 @@ const ContactsWrapper = styled.div`
 `
 
 const ImgWrapper = styled.div`
+animation: appear-slowly 0.5s ease-in 1;
   display: flex;
   justify-content: space-around;
   align-items: center;
