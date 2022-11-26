@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import SideCartItem from './SideCartItem';
 
 function SideCart(props) {
@@ -45,6 +46,13 @@ function SideCart(props) {
     </CartWrapper>
   );
 }
+
+SideCart.propTypes = {
+  cart: PropTypes.array.isRequired,
+  handleAdd: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
+  toggleCartDisplay: PropTypes.func.isRequired,
+};
 
 const CartWrapper = styled.div`
   position: absolute;

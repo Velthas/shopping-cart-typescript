@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ShopItem = (props) => {
   const { product, handleAdd } = props;
@@ -47,6 +48,11 @@ const ShopItem = (props) => {
       </InfoContainer>
     </ProductContainer>
   );
+};
+
+ShopItem.propTypes = {
+  product: PropTypes.array.isRequired,
+  handleAdd: PropTypes.func.isRequired,
 };
 
 const ProductContainer = styled.div`

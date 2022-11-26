@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import SideCart from './Cart/SideCart';
 
@@ -58,6 +59,12 @@ const Header = (props) => {
       </NavContainer>
     </Navbar>
   );
+};
+
+Header.propTypes = {
+  cart: PropTypes.array.isRequired,
+  handleAdd: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };
 
 const Logo = styled.h1`

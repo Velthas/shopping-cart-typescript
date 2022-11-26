@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Home from '../pages/Home';
 import Shop from '../pages/Shop/Shop';
@@ -15,6 +16,11 @@ const Main = (props) => {
       <Route path="contacts" element={<Contacts />} />
     </Routes>
   );
+};
+
+Main.propTypes = {
+  stock: PropTypes.array.isRequired,
+  handleAdd: PropTypes.func.isRequired,
 };
 
 export default Main;

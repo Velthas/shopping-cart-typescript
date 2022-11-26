@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import plus from '../../assets/images/plus.svg';
 import minus from '../../assets/images/minus.svg';
 
@@ -39,6 +40,12 @@ const SideCartItem = (props) => {
       </ProductInfoWrapper>
     </EntryWrapper>
   );
+};
+
+SideCartItem.propTypes = {
+  product: PropTypes.object.isRequired,
+  handleAdd: PropTypes.func.isRequired,
+  handleRemove: PropTypes.func.isRequired,
 };
 
 const EntryWrapper = styled.div`
