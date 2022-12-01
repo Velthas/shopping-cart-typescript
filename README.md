@@ -1,7 +1,7 @@
 
 # <img src="https://cdn-icons-png.flaticon.com/512/703/703282.png" height="70px" width="70px"> </img>WeShop - Shopping Cart  <img src="https://cdn-icons-png.flaticon.com/512/703/703282.png" height="70px" width="70px"> </img>
 
-**Live at:**https://velthas.github.io/shopping-cart/
+**Live at:** https://velthas.github.io/shopping-cart/
 
 ### Overview
 
