@@ -44,7 +44,11 @@ Finally, the user can click on the 'Contacts' section of the navbar to reach the
 - **Montserrat:** Julieta Ulanovsky
 
 **Icons:** 
- - **Shopping Cart:** Google Material Icons
- - **Plus Icon:** Google Material Icons
- - **Minus Icon:** Google Material Icons
- - **Readme Icon:** Freepik, Flaticon
+ - **Shopping Cart, Plus Icon, Minus Icon:** Google Material Icons
+ - **Twitter, Github, Pinterest icons:** Pixel Perfect, Flaticon
+ - **Messenger icon:** Darius Dan, Flaticon
+ - **Facebook, Readme icon:** Freepik, Flaticon
+ - **Instagram icon:** Edt.im, Flaticon
+
+**Images:**
+ - **Homepage Image:** Force Majeure on Unsplash
