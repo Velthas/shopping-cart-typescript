@@ -58,7 +58,6 @@ const HeroText = styled.div`
 
   @media (max-width: 500px) {
     margin-top: 20%;
-    font-size: 2rem;
   }
 `;
 
@@ -68,6 +67,10 @@ const Header = styled.h1`
   font-weight: normal;
   color: ${({ theme }) => theme.colors.light};
   text-shadow: 1px 1px 1px ${({ theme }) => theme.colors.dark};
+
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Button = styled.button`
