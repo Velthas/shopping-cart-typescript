@@ -86,10 +86,12 @@ const Navbar = styled.nav`
   height: 10vh;
 
   box-shadow: 0px 3px 7px 0px #dadada;
+  min-height: 80px;
 
   @media(max-width: 700px) {
     height: 20vh;
     flex-direction: column;
+    min-height: 120px;
   }
 `;
 

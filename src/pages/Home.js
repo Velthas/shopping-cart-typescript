@@ -27,6 +27,7 @@ const HomeWrapper = styled.div`
   background-position: center;
 
   height: calc(90vh - 50px);
+  min-height: 650px;
   position: relative;
   z-index: 1;
 
@@ -53,6 +54,11 @@ const HeroText = styled.div`
 
   @media (max-width: 700px) {
     margin: 0;
+  }
+
+  @media (max-width: 500px) {
+    margin-top: 20%;
+    font-size: 2rem;
   }
 `;
 
