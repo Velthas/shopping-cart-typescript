@@ -85,7 +85,7 @@ const Navbar = styled.nav`
   position: relative;
   height: 10vh;
 
-  box-shadow: 0px 3px 7px 0px #858585;
+  box-shadow: 0px 3px 7px 0px #dadada;
 
   @media(max-width: 700px) {
     height: 20vh;

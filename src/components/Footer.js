@@ -18,6 +18,7 @@ function Footer() {
 }
 
 const FooterWrapper = styled.div`
+  height: 50px;
   padding: 15px 10px;
 
   display: flex;

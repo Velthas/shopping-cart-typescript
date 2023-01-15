@@ -25,7 +25,8 @@ Shop.propTypes = {
 };
 
 const ShopWrapper = styled.div`
-  width: 100vw;
+  min-height: calc(90vh - 50px);
+  max-width: 100vw;
   padding: 5vw;
 
   display: grid;

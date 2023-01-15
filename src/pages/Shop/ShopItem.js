@@ -61,6 +61,8 @@ const ProductContainer = styled.div`
   background-color: white;
   border-radius: 4px;
   border: 1px solid #dfdfdf;
+
+  max-height: 500px;
 `;
 
 const ImageBackdrop = styled.div`
