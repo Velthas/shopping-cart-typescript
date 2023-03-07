@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.6862e8ed.css",
-    "main.js": "/shopping-cart/static/js/main.90372031.js",
-    "static/media/formajeure4.jpg": "/shopping-cart/static/media/formajeure4.c4b34a55d758f6db5f5e.jpg",
-    "static/media/Oswald-Regular.ttf": "/shopping-cart/static/media/Oswald-Regular.e815068d369177121fd8.ttf",
-    "static/media/BebasNeue-Regular.ttf": "/shopping-cart/static/media/BebasNeue-Regular.c501e16fa3f0781f9d73.ttf",
-    "static/media/Vogue.ttf": "/shopping-cart/static/media/Vogue.cc23cdc2582e9de16b77.ttf",
-    "static/media/messenger.png": "/shopping-cart/static/media/messenger.0877f09e43f49399752e.png",
-    "static/media/instagram.png": "/shopping-cart/static/media/instagram.56d3c2ef9b43e98875c0.png",
-    "static/media/pinterest.png": "/shopping-cart/static/media/pinterest.75ff25a1305fc6b55649.png",
-    "static/media/github.png": "/shopping-cart/static/media/github.f11021803f68852df283.png",
-    "static/media/shop.svg": "/shopping-cart/static/media/shop.441f6bad2f286cb794401f20378bd693.svg",
-    "index.html": "/shopping-cart/index.html",
-    "static/media/plus.svg": "/shopping-cart/static/media/plus.e46260f47d4a148fddef4dad18a383e3.svg",
-    "static/media/minus.svg": "/shopping-cart/static/media/minus.fed504bc0826de3714aea9df2181f95a.svg",
-    "main.6862e8ed.css.map": "/shopping-cart/static/css/main.6862e8ed.css.map",
-    "main.90372031.js.map": "/shopping-cart/static/js/main.90372031.js.map"
+    "main.css": "/shopping-cart-typescript/static/css/main.bf73dc41.css",
+    "main.js": "/shopping-cart-typescript/static/js/main.526fc13f.js",
+    "static/media/formajeure4.jpg": "/shopping-cart-typescript/static/media/formajeure4.c4b34a55d758f6db5f5e.jpg",
+    "static/media/Oswald-Regular.ttf": "/shopping-cart-typescript/static/media/Oswald-Regular.e815068d369177121fd8.ttf",
+    "static/media/BebasNeue-Regular.ttf": "/shopping-cart-typescript/static/media/BebasNeue-Regular.c501e16fa3f0781f9d73.ttf",
+    "static/media/Vogue.ttf": "/shopping-cart-typescript/static/media/Vogue.cc23cdc2582e9de16b77.ttf",
+    "static/media/messenger.png": "/shopping-cart-typescript/static/media/messenger.0877f09e43f49399752e.png",
+    "static/media/instagram.png": "/shopping-cart-typescript/static/media/instagram.56d3c2ef9b43e98875c0.png",
+    "static/media/pinterest.png": "/shopping-cart-typescript/static/media/pinterest.75ff25a1305fc6b55649.png",
+    "static/media/github.png": "/shopping-cart-typescript/static/media/github.f11021803f68852df283.png",
+    "static/media/shop.svg": "/shopping-cart-typescript/static/media/shop.441f6bad2f286cb794401f20378bd693.svg",
+    "index.html": "/shopping-cart-typescript/index.html",
+    "static/media/plus.svg": "/shopping-cart-typescript/static/media/plus.e46260f47d4a148fddef4dad18a383e3.svg",
+    "static/media/minus.svg": "/shopping-cart-typescript/static/media/minus.fed504bc0826de3714aea9df2181f95a.svg",
+    "main.bf73dc41.css.map": "/shopping-cart-typescript/static/css/main.bf73dc41.css.map",
+    "main.526fc13f.js.map": "/shopping-cart-typescript/static/js/main.526fc13f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6862e8ed.css",
-    "static/js/main.90372031.js"
+    "static/css/main.bf73dc41.css",
+    "static/js/main.526fc13f.js"
   ]
 }
