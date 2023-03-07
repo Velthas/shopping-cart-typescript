@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import SideCartItem from './SideCartItem';
 
-function SideCart(props) {
-  const { cart, handleAdd, handleRemove, toggleCartDisplay } = props;
+import SideCartItem from './SideCartItem.tsx';
+import { Product } from '../../types/types';
 
-  const total = cart.reduce((accumulator, item) =>
-    accumulator + (item.amount * item.price), 0)
-    .toFixed(2);
+type Props = {
+  cart: Product[],
+  handleAdd: (product: Product) => void,
+  handleRemove: (product: Product) => void,
+  toggleCartDisplay: () => void,
+}
+
+function SideCart({cart, handleAdd, handleRemove, toggleCartDisplay}: Props) {
+  const total = cart.reduce((accumulator, item) => {
+    if(item.amount) return accumulator + (item.amount * item.price);
+    else return accumulator;
+  }, 0).toFixed(2);
 
   const notifyUser = () => alert('Hello! This project does not include a checkout option, so this would be the end of the demo! Thank you for using it!');
 
@@ -46,13 +53,6 @@ function SideCart(props) {
     </CartWrapper>
   );
 }
-
-SideCart.propTypes = {
-  cart: PropTypes.array.isRequired,
-  handleAdd: PropTypes.func.isRequired,
-  handleRemove: PropTypes.func.isRequired,
-  toggleCartDisplay: PropTypes.func.isRequired,
-};
 
 const CartWrapper = styled.div`
   position: absolute;

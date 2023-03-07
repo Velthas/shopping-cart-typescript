@@ -1,14 +1,17 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import Home from '../pages/Home';
-import Shop from '../pages/Shop/Shop';
-import Contacts from '../pages/Contacts';
+import Home from '../pages/Home.tsx';
+import Shop from '../pages/Shop/Shop.tsx';
+import Contacts from '../pages/Contacts.tsx';
+import { Product } from '../types/types';
 
-const Main = (props) => {
-  const { stock, handleAdd } = props;
+type Props = {
+  stock: Product[], 
+  handleAdd: (product: Product) => void, 
+}
 
+const Main = ({stock, handleAdd}: Props) => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -16,11 +19,6 @@ const Main = (props) => {
       <Route path="contacts" element={<Contacts />} />
     </Routes>
   );
-};
-
-Main.propTypes = {
-  stock: PropTypes.array.isRequired,
-  handleAdd: PropTypes.func.isRequired,
 };
 
 export default Main;

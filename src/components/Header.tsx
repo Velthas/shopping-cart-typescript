@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-import SideCart from './Cart/SideCart';
-
+import SideCart from './Cart/SideCart.tsx';
 import cartIcon from '../assets/images/shop.svg';
+import { Product } from '../types/types';
 
-const Header = (props) => {
-  const { cart, handleAdd, handleRemove } = props;
+type Props = {
+  cart: Product[],
+  handleAdd: (product: Product) => void,
+  handleRemove: (product: Product) => void
+};
 
+const Header = ({cart, handleAdd, handleRemove}: Props) => {
   const [cartDisplay, setCartDisplay] = useState(false);
   const toggleCartDisplay = () => setCartDisplay(!cartDisplay);
 
-  const productAmount = cart.reduce((accumulator, item) => accumulator + item.amount, 0);
+  const productAmount = cart.reduce((accumulator: number, item: Product): number => {
+   if(item.amount) return accumulator + item.amount;
+   else return accumulator;
+  }, 0);
 
   return (
     <Navbar>
@@ -59,12 +65,6 @@ const Header = (props) => {
       </NavContainer>
     </Navbar>
   );
-};
-
-Header.propTypes = {
-  cart: PropTypes.array.isRequired,
-  handleAdd: PropTypes.func.isRequired,
-  handleRemove: PropTypes.func.isRequired,
 };
 
 const Logo = styled.h1`

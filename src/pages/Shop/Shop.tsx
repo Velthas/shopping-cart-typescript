@@ -1,14 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ShopItem from './ShopItem';
+import { Product } from '../../types/types';
+// @ts-ignore
+import ShopItem from './ShopItem.tsx';
 
-const Shop = (props) => {
-  const { stock, handleAdd } = props;
+type Props = {
+  stock: Array<Product>,
+  handleAdd: (product: Product) => void,
+};
+
+const Shop = ({stock, handleAdd}: Props) => {
   return (
     <ShopWrapper>
-      {stock.map((product) =>
+      {stock.map((product: Product) =>
         <ShopItem
           key={product.id}
           product={product}
@@ -17,11 +22,6 @@ const Shop = (props) => {
       )}
     </ShopWrapper>
   );
-};
-
-Shop.propTypes = {
-  stock: PropTypes.array.isRequired,
-  handleAdd: PropTypes.func.isRequired,
 };
 
 const ShopWrapper = styled.div`

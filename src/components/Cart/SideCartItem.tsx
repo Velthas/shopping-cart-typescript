@@ -1,16 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+
 import plus from '../../assets/images/plus.svg';
 import minus from '../../assets/images/minus.svg';
+import { Product } from '../../types/types';
 
-const SideCartItem = (props) => {
-  const { product, handleAdd, handleRemove } = props;
+type Props = {
+  product: Product,
+  handleAdd: (shopProduct: Product) => void,
+  handleRemove: (shopProduct: Product) => void, 
+}
+
+const SideCartItem = ({product, handleAdd, handleRemove}: Props) => {
 
   const shortenedName = product.title.length > 15
     ? `${product.title.slice(0, 15)}...`
     : product.title;
-  const total = (product.amount * product.price).toFixed(2);
+  const total = (product.amount ? product.amount * product.price : 0).toFixed(2);
 
   return (
     <EntryWrapper>
@@ -40,12 +46,6 @@ const SideCartItem = (props) => {
       </ProductInfoWrapper>
     </EntryWrapper>
   );
-};
-
-SideCartItem.propTypes = {
-  product: PropTypes.object.isRequired,
-  handleAdd: PropTypes.func.isRequired,
-  handleRemove: PropTypes.func.isRequired,
 };
 
 const EntryWrapper = styled.div`

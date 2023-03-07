@@ -1,11 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import facebook from '../assets/images/facebook.png';
-import messenger from '../assets/images/messenger.png';
-import instagram from '../assets/images/instagram.png';
-import pinterest from '../assets/images/pinterest.png';
-import github from '../assets/images/github.png';
+import facebook from "../assets/images/facebook.png";
+import messenger from "../assets/images/messenger.png";
+import instagram from "../assets/images/instagram.png";
+import pinterest from "../assets/images/pinterest.png";
+import github from "../assets/images/github.png";
 
 function Contacts() {
   return (

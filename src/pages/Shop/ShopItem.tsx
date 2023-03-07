@@ -1,27 +1,32 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { Product } from '../../types/types';
 
-const ShopItem = (props) => {
-  const { product, handleAdd } = props;
+type Props = {
+  product: Product, 
+  handleAdd: (product: Product) => void,
+};
 
+const ShopItem = ({product, handleAdd}: Props) => {
   const [button, setButton] = useState(false);
   const [added, setAdded] = useState(false);
 
-  const toggleButton = (bool) => setButton(bool);
-  const showCartFeedback = () => {
+  const toggleButton = (bool: boolean) => setButton(bool);
+
+  const showCartFeedback = (): void => {
     setAdded(true);
     setTimeout(() => setAdded(false), 3000);
   };
-  const addToCart = () => {
+
+  const addToCart = (): void => {
     handleAdd(product);
     showCartFeedback();
   };
 
   return (
     <ProductContainer
-      onMouseEnter={() => toggleButton(true)}
-      onMouseLeave={() => toggleButton(false)}
+      onMouseEnter={(): void => toggleButton(true)}
+      onMouseLeave={(): void => toggleButton(false)}
     >
       <ImageBackdrop added={added} image={product.image}>
         { added && (
@@ -50,11 +55,6 @@ const ShopItem = (props) => {
   );
 };
 
-ShopItem.propTypes = {
-  product: PropTypes.array.isRequired,
-  handleAdd: PropTypes.func.isRequired,
-};
-
 const ProductContainer = styled.div`
   animation: appear-slowly 0.5s ease-in 1;
 
@@ -65,7 +65,7 @@ const ProductContainer = styled.div`
   max-height: 500px;
 `;
 
-const ImageBackdrop = styled.div`
+const ImageBackdrop = styled.div<{image: string; added: boolean}>`
   height: 300px;
   border-bottom: 1px solid #dfdfdf;
 
