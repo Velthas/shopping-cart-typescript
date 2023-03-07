@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import './styles/shared.css';
 
-import Header from './components/Header.tsx';
-import Main from './components/Main.tsx';
-import Footer from './components/Footer.tsx';
+import Header from './components/Header';
+import Main from './components/Main';
+import Footer from './components/Footer';
 
 import { Product } from './types/types';
 

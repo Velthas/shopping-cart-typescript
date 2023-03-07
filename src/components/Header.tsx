@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-import SideCart from './Cart/SideCart.tsx';
+import SideCart from './Cart/SideCart';
 import cartIcon from '../assets/images/shop.svg';
 import { Product } from '../types/types';
 

@@ -12,7 +12,6 @@ type Props = {
 }
 
 const SideCartItem = ({product, handleAdd, handleRemove}: Props) => {
-
   const shortenedName = product.title.length > 15
     ? `${product.title.slice(0, 15)}...`
     : product.title;

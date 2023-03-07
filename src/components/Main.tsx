@@ -1,9 +1,9 @@
 import { Routes, Route } from 'react-router-dom';
 import React from 'react';
 
-import Home from '../pages/Home.tsx';
-import Shop from '../pages/Shop/Shop.tsx';
-import Contacts from '../pages/Contacts.tsx';
+import Home from '../pages/Home';
+import Shop from '../pages/Shop/Shop';
+import Contacts from '../pages/Contacts';
 import { Product } from '../types/types';
 
 type Props = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import SideCartItem from './SideCartItem.tsx';
+import SideCartItem from './SideCartItem';
 import { Product } from '../../types/types';
 
 type Props = {

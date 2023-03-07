@@ -1,4 +1,4 @@
-type Product = {
+export type Product = {
   category: string,
   description: string,
   id: number,
@@ -8,5 +8,3 @@ type Product = {
   title: string,
   amount?: number,
 };
-
-export { Product };
