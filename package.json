@@ -1,6 +1,6 @@
 {
   "name": "shopping-cart",
-  "homepage": "https://velthas.github.io/shopping-cart",
+  "homepage": "https://velthas.github.io/shopping-cart-typescript",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
