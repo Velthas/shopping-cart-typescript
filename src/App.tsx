@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename="shopping-cart">
+    <BrowserRouter basename="shopping-cart-typescript">
       <Header
         cart={cart}
         handleAdd={handleAdd}
